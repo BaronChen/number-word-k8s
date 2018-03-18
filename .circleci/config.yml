@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:9.8.0-browsers
+      - image: microsoft/azure-cli:latest
     steps:
       - checkout
       
@@ -16,5 +16,5 @@ jobs:
       
       - run:
           name: Deploy
-          command: bash 
+          command: bash ./deploy.sh
       
