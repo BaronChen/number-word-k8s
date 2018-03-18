@@ -17,8 +17,9 @@ spec:
         track: stable
     spec:
       containers:
-        - name: number-word-api
-          image: numberwordapi:{apiVersion}
-          ports:
-            - name: http
-              containerPort: 80
+      - name: number-word-api
+        image: baron123.azurecr.io/number-word/numberwordapi:{apiVersion}
+        imagePullPolicy: Always
+        ports:
+          - name: http
+            containerPort: 80
