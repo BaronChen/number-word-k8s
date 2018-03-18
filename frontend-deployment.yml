@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: number-word-web
+spec:
+  selector:
+    matchLabels:
+      app: number-word
+      tier: frontend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: number-word
+        tier: frontend
+        track: stable
+    spec:
+      containers:
+      - name: number-word-web
+        image: numberwordweb:prod-v1
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/usr/sbin/nginx","-s","quit"]

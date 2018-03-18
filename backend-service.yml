@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: number-word-api
+spec:
+  selector:
+    app: number-word
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    nodePort: 31300
+  type: LoadBalancer
