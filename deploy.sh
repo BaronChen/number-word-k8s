@@ -1,5 +1,7 @@
 #!/bin/bash
 
+az aks install-cli
+
 az login --service-principal -u $SERVICE_PRINCIPLE --password $SP_PASSWORD --tenant $TENANT
 
 az aks get-credentials --resource-group number-word-prod --name number-word
