@@ -10,8 +10,7 @@ jobs:
       - run:
           name: Build config
           command: |
-            bash ./config-version.sh
-            bash ./build-config.sh $API_VERSION $WEB_VERSION
+            bash ./config.sh
 
       - run:
           name: Deploy
