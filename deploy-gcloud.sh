@@ -1,8 +1,8 @@
 #!/bin/bash
+export CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
 gcloud components install kubectl
 
-export CLOUDSDK_CORE_DISABLE_PROMPTS=1
 echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
 gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
 gcloud config set project number-text-convert
