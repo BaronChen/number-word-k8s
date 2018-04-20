@@ -2,19 +2,18 @@ version: 2
 jobs:
   build:
     docker:
-      - image: microsoft/azure-cli:latest
+      - image: google/cloud-sdk:198.0.0-alpine
     steps:
-      - checkout
-      
-      - setup_remote_docker:   
-          docker_layer_caching: true 
+      - checkout      
 
       # build and push Docker image
       - run:
           name: Build config
-          command: bash ./build-config.sh $API_VERSION $WEB_VERSION
-      
+          command: |
+            bash ./config-version.sh
+            bash ./build-config.sh $API_VERSION $WEB_VERSION
+
       - run:
           name: Deploy
-          command: bash ./deploy.sh
+          command: bash ./deploy-gcloud.sh
       

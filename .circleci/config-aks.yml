@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: microsoft/azure-cli:latest
+    steps:
+      - checkout
+      
+      - setup_remote_docker:   
+          docker_layer_caching: true 
+
+      # build and push Docker image
+      - run:
+          name: Build config
+          command: bash ./build-config.sh $API_VERSION $WEB_VERSION
+      
+      - run:
+          name: Deploy
+          command: bash ./deploy.sh
+      
