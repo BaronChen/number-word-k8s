@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: number-word-web
-        image: baron123.azurecr.io/number-word/numberwordweb:{webVersion}
+        image: asia.gcr.io/number-text-convert/numberwordweb:{webVersion}
         imagePullPolicy: Always
         lifecycle:
           preStop:

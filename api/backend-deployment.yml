@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: number-word-api
-        image: baron123.azurecr.io/number-word/numberwordapi:{apiVersion}
+        image: asia.gcr.io/number-text-convert/numberwordapi:{apiVersion}
         imagePullPolicy: Always
         ports:
           - name: http
