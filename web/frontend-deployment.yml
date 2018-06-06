@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: number-word-web
-        image: asia.gcr.io/number-text-convert/numberwordweb:{webVersion}
+        image: asia.gcr.io/number-2-text/numberwordweb:{webVersion}
         imagePullPolicy: Always
         lifecycle:
           preStop:

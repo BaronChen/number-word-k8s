@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: number-word-api
-        image: asia.gcr.io/number-text-convert/numberwordapi:{apiVersion}
+        image: asia.gcr.io/number-2-text/numberwordapi:{apiVersion}
         imagePullPolicy: Always
         ports:
           - name: http
