@@ -3,6 +3,7 @@ apiVersion: v1
 metadata:
   name: number-word-api
 spec:
+  loadBalancerIP: 35.201.27.24
   selector:
     app: number-word
     tier: backend
