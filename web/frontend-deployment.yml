@@ -21,7 +21,7 @@ spec:
         resources:
           requests:
             memory: "128Mi"
-            cpu: "200m"
+            cpu: "100m"
         image: asia.gcr.io/number-2-text/numberwordweb:{webVersion}
         imagePullPolicy: Always
         lifecycle:
