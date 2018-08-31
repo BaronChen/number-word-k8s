@@ -18,6 +18,10 @@ spec:
     spec:
       containers:
       - name: number-word-web
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "200m"
         image: asia.gcr.io/number-2-text/numberwordweb:{webVersion}
         imagePullPolicy: Always
         lifecycle:

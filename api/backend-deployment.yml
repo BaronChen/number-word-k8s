@@ -18,6 +18,10 @@ spec:
     spec:
       containers:
       - name: number-word-api
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "300m"
         image: asia.gcr.io/number-2-text/numberwordapi:{apiVersion}
         imagePullPolicy: Always
         ports:
